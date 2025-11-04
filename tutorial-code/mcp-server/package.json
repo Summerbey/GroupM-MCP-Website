@@ -1,0 +1,16 @@
+{
+  "name": "mcp-task-manager-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server for task management - Tutorial example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["mcp", "model-context-protocol", "task-manager"],
+  "author": "Group M",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0"
+  }
+}

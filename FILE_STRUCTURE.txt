@@ -1,0 +1,73 @@
+📁 MCP Group M Website - Complete File Structure
+================================================
+
+mcp-website/
+│
+├── 📄 package.json                     # Project dependencies
+├── 📄 vite.config.js                   # Build configuration ⚠️ UPDATE THIS!
+├── 📄 index.html                       # HTML entry point
+├── 📄 .gitignore                       # Git ignore rules
+├── 📄 deploy.sh                        # Quick deploy script
+│
+├── 📚 DOCUMENTATION
+│   ├── 📄 README.md                    # Main project overview
+│   ├── 📄 GETTING_STARTED.md           # Quick start guide
+│   ├── 📄 DEPLOYMENT_GUIDE.md          # Deployment instructions
+│   ├── 📄 PROJECT_SUMMARY.md           # This summary
+│   └── 📄 FILE_STRUCTURE.txt           # This file
+│
+├── 📁 src/                             # React application source
+│   ├── 📄 main.jsx                     # App entry point
+│   ├── 📄 App.jsx                      # Main router
+│   │
+│   ├── 📁 pages/                       # 5 Main Pages
+│   │   ├── 📄 Welcome.jsx              # Landing page
+│   │   ├── 📄 Welcome.css
+│   │   ├── 📄 Home.jsx                 # MCP overview
+│   │   ├── 📄 Home.css
+│   │   ├── 📄 Presentation.jsx         # Your presentation
+│   │   ├── 📄 Presentation.css
+│   │   ├── 📄 Tutorial.jsx             # 60-min tutorial ⭐
+│   │   ├── 📄 Tutorial.css
+│   │   ├── 📄 CodeExplanation.jsx      # Code deep dive
+│   │   └── 📄 CodeExplanation.css
+│   │
+│   ├── 📁 components/                  # Reusable Components
+│   │   ├── 📄 Navigation.jsx           # Top navigation
+│   │   ├── 📄 Navigation.css
+│   │   ├── 📄 CodeBlock.jsx            # Code highlighting
+│   │   ├── 📄 CodeBlock.css
+│   │   └── 📄 VideoEmbed.jsx           # Video support
+│   │
+│   └── 📁 styles/                      # Global Styles
+│       └── 📄 global.css               # Theme & layout
+│
+└── 📁 tutorial-code/                   # Working Code Examples
+    └── 📁 mcp-server/                  # MCP Server Tutorial
+        ├── 📄 index.js                 # Server implementation
+        ├── 📄 package.json             # Server dependencies
+        └── 📄 README.md                # Server documentation
+
+GENERATED ON BUILD:
+├── 📁 node_modules/                    # Dependencies (git ignored)
+└── 📁 dist/                            # Production build (git ignored)
+
+TOTAL FILES:
+- React Components: 8
+- Pages: 5
+- CSS Files: 7
+- Documentation: 5
+- Tutorial Code: 3
+- Configuration: 3
+
+KEY FILES TO EDIT BEFORE DEPLOYMENT:
+1. vite.config.js - Update base URL with your repo name
+2. src/pages/Tutorial.jsx - Add your video embeds (optional)
+3. src/pages/Presentation.jsx - Customize content (optional)
+
+COMMANDS:
+npm install              # Install dependencies
+npm run dev              # Start development server
+npm run build            # Build for production
+npm run deploy           # Deploy to GitHub Pages
+./deploy.sh              # Automated deployment script

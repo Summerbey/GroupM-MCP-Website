@@ -1,0 +1,168 @@
+.tutorial-page {
+  padding-bottom: 4rem;
+}
+
+.tutorial-nav {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  border: 2px solid var(--primary-color);
+}
+
+.tutorial-toc {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.tutorial-toc li a {
+  display: block;
+  padding: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.tutorial-toc li a:hover {
+  border-color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.tutorial-section {
+  scroll-margin-top: 100px;
+}
+
+.test-examples {
+  margin: 1.5rem 0;
+}
+
+.test-example {
+  background: rgba(99, 102, 241, 0.05);
+  border-left: 3px solid var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.architecture-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.arch-box {
+  padding: 1rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.option-card {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.option-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.test-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.test-checklist label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.test-checklist label:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.test-checklist input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.next-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.next-step-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.next-step-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.tutorial-footer {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+  border: 2px solid var(--primary-color);
+}
+
+.tutorial-cta {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* Video Tutorial Styling */
+.video-wrapper {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #000;
+}
+
+.tutorial-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 600px;
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .tutorial-video {
+    max-height: 400px;
+  }
+}

@@ -1,0 +1,237 @@
+.home-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.timeline {
+  margin: 2rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 60px;
+  height: 30px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: rgba(99, 102, 241, 0.05);
+  border-left: 3px solid var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.timeline-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 0;
+}
+
+.architecture-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.arch-component {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.arch-component:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2);
+}
+
+.arch-component h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.arch-component p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.comparison-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 2px solid;
+}
+
+.comparison-card.before {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: #ef4444;
+}
+
+.comparison-card.after {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: var(--success-color);
+}
+
+.comparison-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.comparison-card.before h3 {
+  color: #ef4444;
+}
+
+.comparison-card.after h3 {
+  color: var(--success-color);
+}
+
+.comparison-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comparison-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-card li:last-child {
+  border-bottom: none;
+}
+
+.use-case {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
+}
+
+.use-case:hover {
+  border-color: var(--primary-color);
+  transform: translateX(10px);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+}
+
+.use-case-icon {
+  font-size: 3rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.use-case-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.use-case-content p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+  border: 2px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.cta-box h2 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cta-box p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-section {
+    grid-template-columns: 1fr;
+  }
+
+  .use-case {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: -1.5rem;
+    width: 50px;
+    font-size: 0.75rem;
+  }
+}
