@@ -9,8 +9,9 @@ import CodeExplanation from './pages/CodeExplanation';
 import './styles/global.css';
 
 function App() {
+  const basename = import.meta.env.PROD ? '/GroupM-MCP-Website' : '';
   return (
-    <Router>
+    <Router basename={basename}>
       <Navigation />
       <Routes>
         <Route path="/" element={<Welcome />} />
