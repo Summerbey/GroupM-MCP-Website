@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Welcome from './pages/Welcome';
 import Home from './pages/Home';
@@ -7,11 +6,11 @@ import Presentation from './pages/Presentation';
 import Tutorial from './pages/Tutorial';
 import CodeExplanation from './pages/CodeExplanation';
 import './styles/global.css';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const basename = import.meta.env.PROD ? '/GroupM-MCP-Website' : '';
   return (
-    <Router basename={basename}>
+    <Router>
       <Navigation />
       <Routes>
         <Route path="/" element={<Welcome />} />
